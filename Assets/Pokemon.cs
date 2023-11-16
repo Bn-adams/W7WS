@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class Pokemon : MonoBehaviour
 {
-    private bool isCaught;
-    private int level = 1;
+    private bool IsCaught { get; set; }
+    private int Level { get; set; }
 
-    public bool IsCaught { get => isCaught; set => isCaught = value; }
-    public int Level { get => level; set => level = value; }
+  
 
-    // Start is called before the first frame update
-    void Start()
+   public void IncreasedLevel()
     {
-        
+        Level++;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetCaught(bool status)
     {
-        
+        IsCaught = status;
     }
 }

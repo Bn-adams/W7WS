@@ -5,8 +5,8 @@ using UnityEngine;
 public class playerController : MonoBehaviour
 {
     Rigidbody rb;
-    private int horizontalInput;
-    private int verticalInput;
+    private float horizontalInput;
+    private float verticalInput;
     private int MS = 3;
 
     // Start is called before the first frame update
@@ -22,7 +22,15 @@ public class playerController : MonoBehaviour
     }
     public void Movement()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        rb.velocity = new Vector3(MS*horizontalInput, rb.velocity.y, MS*verticalInput);
+    }
+    public void Action()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
 
+        }
     }
 }

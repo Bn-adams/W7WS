@@ -6,12 +6,12 @@ public class Pokeball : Item
 {
     public override void Execute()
     {
-        target.IsCaught = true;
+        
 
     }
     public override void Undo()
     {
-        target.IsCaught = false;
+       
     }
     private void Awake()
     {

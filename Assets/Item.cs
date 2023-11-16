@@ -5,9 +5,9 @@ using UnityEngine;
 
 public interface ICommand
 {
-    void Execute();
+    public abstract void Execute();
 
-    void Undo();
+    public abstract void Undo();
 }
 public abstract class Item : MonoBehaviour, ICommand
 {
